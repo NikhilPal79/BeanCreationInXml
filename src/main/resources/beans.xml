@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean name="RRR" class="Nik.learning.__May.Movie" >
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <constructor-arg name="name" value="RRR"></constructor-arg>
+        <constructor-arg name="year" value="2022"></constructor-arg>
+        <constructor-arg name="genre" value="action"></constructor-arg>
+        <constructor-arg name="cast">
+            <list>
+                <value>hero1</value>
+                <value>hero2</value>
+                <value>heroine</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="castSalary">
+            <map>
+                <entry key="hero1" value="150"></entry>
+                <entry key="hero2" value="250"></entry>
+                <entry key="heroine" value="350"></entry>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean name="HP" class="Nik.learning.__May.Movie">
+        <constructor-arg name="id" value="2"></constructor-arg>
+        <constructor-arg name="name" value="Harry Potter"></constructor-arg>
+        <constructor-arg name="year" value="2025"></constructor-arg>
+        <constructor-arg name="genre" value="frictional"></constructor-arg>
+        <constructor-arg name="cast">
+            <list>
+                <value>harry</value>
+                <value>emma</value>
+                <value>ron</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="castSalary">
+            <map>
+                <entry key="harry" value="500"></entry>
+                <entry key="emma" value="700"></entry>
+                <entry key="ron" value="200"></entry>
+            </map>
+        </constructor-arg>
+
+    </bean>
+
+    <bean name="Avengers" class="Nik.learning.__May.Movie">
+        <constructor-arg name="id" value="3"></constructor-arg>
+        <constructor-arg name="name" value="Avengers"></constructor-arg>
+        <constructor-arg name="year" value="2024"></constructor-arg>
+        <constructor-arg name="genre" value="Frictinal"></constructor-arg>
+        <constructor-arg name="cast">
+            <list>
+                <value>IronMan</value>
+                <value>Thor</value>
+                <value>Groot</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="castSalary">
+            <map>
+                <entry key="IronMan" value="600"></entry>
+                <entry key="Thor" value="800"></entry>
+                <entry key="Groot" value="900"></entry>
+            </map>
+        </constructor-arg>
+    </bean>
+</beans>
+
