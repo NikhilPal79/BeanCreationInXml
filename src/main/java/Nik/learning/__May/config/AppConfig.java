@@ -2,6 +2,7 @@ package Nik.learning.__May.config;
 
 import Nik.learning.__May.Movie;
 import org.apache.logging.log4j.util.Cast;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
@@ -33,8 +34,9 @@ public class AppConfig {
         </constructor-arg>
     </bean>*/
 
+    @Bean(initMethod = "postInit", destroyMethod = "destroy")
     public Movie RRR(){
-        Movie movie = new Movie(1,"RRR", 2022, "action", List.of("hero1","hero2","heroine"), Map.of("hero1",150, "hero2",800heroine",500));
+        Movie movie = new Movie(1,"RRR", 2022, "action", List.of("hero1","hero2","heroine"), Map.of("hero1",150, "hero2",800,"heroine",500));
         return movie;
     }
 

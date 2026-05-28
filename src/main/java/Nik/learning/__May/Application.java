@@ -1,9 +1,11 @@
 package Nik.learning.__May;
 
+import Nik.learning.__May.config.AppConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 @SpringBootApplication
 public class Application {
@@ -17,19 +19,25 @@ public class Application {
 		// ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
 		///SHOWCASE OF DESTROY METHOD
-		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		/*ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");*/
 
-		Movie movie = context.getBean("Avengers",Movie.class);
+		/*Movie movie = context.getBean("Avengers",Movie.class);
 		Movie movie1 = context.getBean("RRR",Movie.class);
 		Movie movie2 = context.getBean("HP",Movie.class);
 		System.out.println(movie);
 		System.out.println(movie1);
 		System.out.println(movie2);
+		context.registerShutdownHook();*/
+
+
+		/// if you have two beans in the XML file, then if you don't provide the bean name in context.getBean then error
+
+		//may13
+
+		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext("Nik.learning.__May.config");
+		Movie movie = context.getBean("RRR", Movie.class);
+		System.out.println(movie);
 		context.registerShutdownHook();
-
-
-		/// if you have two beans in the xml file, then if you don't provide the bean name in context.getBean then error
-
 
 
 	}

@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean name="RRR" class="Nik.learning.__May.Movie" init-method="postInit" destroy-method="destroy">
+  <!--  <bean name="RRR" class="Nik.learning.__May.Movie" init-method="postInit" destroy-method="destroy">
         <constructor-arg name="id" value="1"></constructor-arg>
         <constructor-arg name="name" value="RRR"></constructor-arg>
         <constructor-arg name="year" value="2022"></constructor-arg>
@@ -66,6 +66,6 @@
                 <entry key="Groot" value="900"></entry>
             </map>
         </constructor-arg>
-    </bean>
+    </bean>-->
 </beans>
 
