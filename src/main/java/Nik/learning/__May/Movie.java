@@ -15,4 +15,12 @@ public class Movie {
     private String genre;
     private List<String> cast;
     private Map<String, Integer> castSalary;
+
+    public  void postInit(){
+        System.out.println("Opening  a delivery stream");
+    }
+
+    public void destroy(){
+        System.out.println("Closing a delivery stream");
+    }
 }
